@@ -1,21 +1,34 @@
-public class checkSquare{
-
-    private int lineAB;
-    private int lineBC;
-    private int lineCD;
-    private int lineDE;
-
-    public Square(int lineAB, int lineBC, int lineCD, int lineDE){
-
-        this.lineAB = lineAB;
-        this.lineBC = lineBC;
-        this.lineCD = lineCD;
-        this.lineDE = lineDE;
-    }
-
-    public double area(){
-        int 
-        
-    }
     
+public class Square {
+
+    private Point bottomLeftCorner;
+    private int sidelength;
+
+    // Determined based on bottom left corner given.
+    private Point bottomRightCorner;
+    private Point topLeftCorner;
+    private Point topRightCorner;
+
+    // Constructor
+    public Square(Point bottomLeftCorner, int sidelength) {
+
+        this.bottomLeftCorner = bottomLeftCorner;
+        this.sidelength = sidelength;
+
+        // Sets other points based on bottom left corner.
+        /**
+         * this.bottomRightCorner = new Point(bottomLeftCorner.getX() + sidelength, bottomLeftCorner.getY());
+         * this.topLeftCorner = new Point(bottomLeftCorner.getX(), bottomLeftCorner.getY() + sidelength);
+         * this.topRightCorner = new Point(bottomLeftCorner.getX() + sidelength, bottomLeftCorner.getY() + sidelength);
+        */
+    }
+
+    public int area() {
+        return this.sidelength * this.sidelength;
+    }
+
+    public int perimeter() {
+        return this.sidelength * 4;
+    }
+
 }
