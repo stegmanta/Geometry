@@ -5,6 +5,7 @@ public class CheckTriangle{
         Point b = new Point(70,80);
         Point c = new Point(60, 40);
         Point d = new Point (30, 50);
+        Point e = new Point (80, 90);
 
         Triangle triangleW = new Triangle(b,c,d);
         
