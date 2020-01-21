@@ -4,9 +4,10 @@ public class Square {
     private int sidelength;
 
     // Determined based on bottom left corner given.
-    private Point bottomRightCorner;
-    private Point topLeftCorner;
-    private Point topRightCorner;
+    /**private Point bottomRightCorner;
+    * private Point topLeftCorner;
+    * private Point topRightCorner;
+    */
 
     // Constructor
     public Square(Point bottomLeftCorner, int sidelength) {
