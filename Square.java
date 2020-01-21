@@ -54,10 +54,15 @@ public class Square {
     public static boolean collision(Square a, Square b) {
 
         Point[] aCoordinates = a.getCoordinates();
+        Point[] bCoordinates = b.getCoordinates();
 
         for (int i = 0; i < aCoordinates.length; i++) {
 
             if (Square.intersect(aCoordinates[i], b)) {
+                return true;
+            }
+
+            if (Square.intersect(bCoordinates[i], a)) {
                 return true;
             }
 
